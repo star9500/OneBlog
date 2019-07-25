@@ -59,7 +59,7 @@
                                 <div class="separator">
                                     <div class="clearfix"></div>
                                     <div>
-                                        Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+                                        V1.0.0
                                     </div>
                                 </div>
                             </form>

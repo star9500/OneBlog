@@ -148,7 +148,7 @@ public class SysConfigServiceImpl implements SysConfigService {
             SysConfig config = this.getByKey(ConfigKeyEnum.INSTALLDATE.getKey());
             if (null == config || StringUtils.isEmpty(config.getConfigValue())) {
                 // 默认建站日期为2019-01-01
-                installdate = Date.from(LocalDate.of(2019, 1, 1).atStartOfDay(ZoneId.systemDefault()).toInstant());
+                installdate = new Date();
             } else {
                 installdate = DateUtil.parse(config.getConfigValue(), DatePattern.NORM_DATETIME_PATTERN);
             }

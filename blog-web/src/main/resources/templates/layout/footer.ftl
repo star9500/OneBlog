@@ -72,16 +72,16 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">山无棱江水为竭，冬雷震震夏雨雪，才敢请君舍</h4>
+                <h4 class="modal-title">您的每一分赞助都是作者写作的动力</h4>
             </div>
             <div class="modal-body">
                 <div class="rewardType" align="center">
                     <ul class="list-unstyle list-inline">
                         <li style="margin-right: 20px;">
-                            <input type="radio" name="type" id="alipay" onclick="PaymentUtils.change(0)" data-index="0" checked="checked" ><span style="margin-left: 5px;">支付宝</span>
+                            <input type="radio" name="type" id="alipay" onclick="PaymentUtils.change(0)" data-index="0" checked="checked" style="width: 20px;"><span style="margin-left: 5px;">支付宝</span>
                         </li>
                         <li style="margin-right: 20px;">
-                            <input type="radio" name="type" id="wechat" onclick="PaymentUtils.change(1)" data-index="1"><span style="margin-left: 5px;">微信</span>
+                            <input type="radio" name="type" id="wechat" onclick="PaymentUtils.change(1)" data-index="1" style="width: 20px;"><span style="margin-left: 5px;">微信</span>
                         </li>
                     </ul>
                 </div>
@@ -116,7 +116,7 @@
                         <li><a href="${config.siteUrl}/disclaimer" title="免责声明" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-file-o fa-fw"></i>免责声明</a></li>
                     </ul>
                 </p>
-                <p>托管于<a href="https://promotion.aliyun.com/ntms/act/ambassador/sharetouser.html?userCode=wylo59db" target="_blank" title="阿里云-为了无法计算的价值" data-toggle="tooltip" data-placement="bottom" rel="external nofollow">阿里云</a> & <a href="https://portal.qiniu.com/signup?code=3l8yx2v0f21ci" target="_blank" title="七牛云-国内领先的企业级云服务商" data-toggle="tooltip" data-placement="bottom" rel="external nofollow">七牛云</a><#if config.recordNumber!> · <a href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action" target="_blank" title="查看备案信息" data-toggle="tooltip" data-placement="bottom" rel="external nofollow">${config.recordNumber}</a></#if></p>
+                <p><#if config.recordNumber!><a href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action" target="_blank" title="查看备案信息" data-toggle="tooltip" data-placement="bottom" rel="external nofollow">${config.recordNumber}</a></#if></p>
                 <p><#if config.copyright!>${config.copyright} |</#if> Powered by <a href="https://gitee.com/yadong.zhang/DBlog" title="OneBlog是一款简洁美观、自适应的Java博客系统..." data-toggle="tooltip" data-placement="right" target="_blank"><i>OneBlog</i></a>  </p>
                 <#if url?? && (url == "index")>
                     <div class="inline external-links">
