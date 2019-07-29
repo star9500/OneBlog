@@ -14,7 +14,7 @@
             <div class="scrolltext">
                 <ul class="list-unstyled" id="notice-box">
                     <li class="scrolltext-title">
-                        <a href="javascript:void(0)" rel="bookmark">本站域名:<a href="https:/www.hemingzhun.com" target="_blank"><strong>https:/www.hemingzhun.com</strong></a></a>
+                        <a href="javascript:void(0)" rel="bookmark">本站域名:<a href="https://www.hemingzhun.com" target="_blank"><strong>https://www.hemingzhun.com</strong></a></a>
                     </li>
                     <li class="scrolltext-title">
                         <a href="javascript:void(0)" rel="bookmark">欢迎各位大佬交流技术，共同进步。</a>
