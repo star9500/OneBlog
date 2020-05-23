@@ -43,7 +43,7 @@ public class ExceptionHandleController {
     @ExceptionHandler(value = {UnauthorizedException.class, AccountException.class})
     @ResponseBody
     public ResponseVO unauthorizedExceptionHandle(Throwable e) {
-        e.printStackTrace(); // 打印异常栈
+        log.error("权限认证异常", e);
         return ResultUtil.error(HttpStatus.UNAUTHORIZED.value(), e.getLocalizedMessage());
     }
 
@@ -56,7 +56,7 @@ public class ExceptionHandleController {
     @ExceptionHandler(value = {MaxUploadSizeExceededException.class})
     @ResponseBody
     public ResponseVO maxUploadSizeExceededExceptionHandle(Throwable e) {
-        e.printStackTrace(); // 打印异常栈
+        log.error("上传文件过大异常", e);
         return ResultUtil.error(CommonConst.DEFAULT_ERROR_CODE, ResponseStatus.UPLOAD_FILE_ERROR.getMessage() + "文件过大！");
     }
 
@@ -79,6 +79,7 @@ public class ExceptionHandleController {
     @ExceptionHandler(value = Exception.class)
     @ResponseBody
     public ResponseVO handle(Throwable e) {
+        log.error("系统处理异常", e);
         if (e instanceof ZhydException || e instanceof GlobalFileException) {
             return ResultUtil.error(e.getMessage());
         }
@@ -90,7 +91,6 @@ public class ExceptionHandleController {
             log.error(responseStatus.getMessage());
             return ResultUtil.error(responseStatus.getCode(), responseStatus.getMessage());
         }
-        e.printStackTrace(); // 打印异常栈
         return ResultUtil.error(CommonConst.DEFAULT_ERROR_CODE, ResponseStatus.ERROR.getMessage());
     }
 }
